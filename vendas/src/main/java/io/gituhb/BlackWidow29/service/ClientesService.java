@@ -1,6 +1,5 @@
 package io.gituhb.BlackWidow29.service;
 
-import io.gituhb.BlackWidow29.model.Cliente;
 import io.gituhb.BlackWidow29.repository.ClientesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
