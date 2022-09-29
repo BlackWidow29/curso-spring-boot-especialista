@@ -1,10 +1,16 @@
 package io.gituhb.BlackWidow29.domain.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+//@Entity
+//@Table(name = "TBL_PEDIDO")
 public class Pedido {
 
+    //@Id
     private Integer id;
     private Cliente cliente;
     private LocalDate dataPedido;

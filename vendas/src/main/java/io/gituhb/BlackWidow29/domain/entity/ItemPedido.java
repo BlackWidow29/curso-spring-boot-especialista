@@ -1,7 +1,14 @@
 package io.gituhb.BlackWidow29.domain.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+//@Entity
+//@Table(name = "TBL_ITEM_PEDIDO")
 public class ItemPedido {
 
+    //@Id
     private Integer id;
     private Pedido pedido;
     private Produto produto;
