@@ -1,17 +1,17 @@
 package io.gituhb.BlackWidow29.domain.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
-//@Entity
-//@Table(name = "TBL_PRODUTO")
+@Entity
+@Table(name = "TBL_PRODUTO")
 public class Produto {
 
-//    @Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String descricao;
+    @Column(name = "preco_unitario")
     private BigDecimal preco;
 
     public Integer getId() {

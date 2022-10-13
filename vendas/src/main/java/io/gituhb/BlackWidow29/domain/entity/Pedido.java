@@ -1,19 +1,22 @@
 package io.gituhb.BlackWidow29.domain.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-//@Entity
-//@Table(name = "TBL_PEDIDO")
+@Entity
+@Table(name = "TBL_PEDIDO")
 public class Pedido {
 
-    //@Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
+    @Column(name = "data_pedido")
     private LocalDate dataPedido;
+    @Column(name = "total", length = 20, precision = 2)
     private BigDecimal total;
 
     public Integer getId() {
