@@ -1,17 +1,21 @@
 package io.gituhb.BlackWidow29.domain.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-//@Entity
-//@Table(name = "TBL_ITEM_PEDIDO")
+@Entity
+@Table(name = "TBL_ITEM_PEDIDO")
 public class ItemPedido {
 
-    //@Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @ManyToOne
+    @JoinColumn(name = "pedido_id")
     private Pedido pedido;
+    @ManyToOne
+    @JoinColumn(name = "produto_id")
     private Produto produto;
+    @Column
     private Integer quantidade;
 
     public Integer getId() {
