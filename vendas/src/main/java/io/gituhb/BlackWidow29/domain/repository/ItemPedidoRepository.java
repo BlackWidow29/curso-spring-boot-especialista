@@ -1,4 +1,4 @@
-package io.gituhb.BlackWidow29.repository;
+package io.gituhb.BlackWidow29.domain.repository;
 
 import io.gituhb.BlackWidow29.domain.entity.ItemPedido;
 import org.springframework.data.jpa.repository.JpaRepository;
